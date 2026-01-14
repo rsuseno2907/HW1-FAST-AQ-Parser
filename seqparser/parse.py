@@ -25,7 +25,7 @@ class Parser:
             check out the documentation on the `Super` keyword.
         """
         self.filename = filename
-        self.store = True
+        self.store = True # what's the point of this attribute?
         self._sequences = None
 
     def get_record(
@@ -186,3 +186,14 @@ class FastqParser(Parser):
                 # we assume that quality will always be after the seq, so if we get here and read_qual is False then we can just return the tuple
                 yield (seq_name, seq, line)  # line here is the quality string
                 read_qual = True
+
+
+# parser_obj = FastaParser("../data/test.fa") 
+# for record in parser_obj:
+#     print(record)
+
+# obj = FastqParser("../data/test.fa")
+# print(next(iter(obj)))
+# for record in obj:
+#     print(record)
+#     break

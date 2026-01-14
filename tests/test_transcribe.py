@@ -25,6 +25,9 @@ def test_transcribe():
     """
     Write your unit test for the transcribe function here.
     """
+    seq = "ACTGAACCC"
+    res = transcribe(seq)
+    assert res == "UGACUUGGG"
     pass
 
 
@@ -32,4 +35,7 @@ def test_reverse_transcribe():
     """
     Write your unit test for the reverse transcribe function here.
     """
+    seq = "ACTGAACCC"
+    res = reverse_transcribe(seq)
+    assert res == "GGGUUCAGU"
     pass
